@@ -1,0 +1,72 @@
+//Styles for Mobile
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: $bg-color;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+img {
+	max-width: 100%;
+	height: auto; 
+}
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px; 
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap; 
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.disabled {
+	cursor:default;
+}
+
+.page-main {
+	padding-left:$main-padding-mobile;
+	padding-right:$main-padding-mobile;
+	padding-top: 20px;
+
+	display: flex;
+	flex-flow: row wrap;
+}
+
+
+//Styles for Desktop
+@media(min-width:$desktop-width){
+	
+	.page-main {
+		width: ($wrapper-width - $main-padding * 2);
+		margin: 0 auto;
+		padding-left:$main-padding;
+		padding-right:$main-padding;
+		padding-top: 50px;
+	
+		display: flex;
+		flex-flow: row nowrap;
+	
+		&__article {
+			flex-basis: 870px;
+			margin-right: 30px;
+		
+		}
+		&__aside {
+			flex-basis: 270px;
+		}
+	}
+}
+
+
+@import "blocks/page-header";
+@import "blocks/page-footer";
+@import "blocks/blog-aside";
+@import "blocks/blog-post";

@@ -1,0 +1,207 @@
+//Styles for Mobile
+.page-footer {
+	width: 100%;
+	background-color: #e6e6e6;
+
+
+	color: #808080;
+	font-size: 14px;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+
+	&__wrapper {
+		width: 100%;
+		text-align: center;
+	}
+
+	&__nav {
+		@include reset-list;
+
+		flex-basis: ($wrapper-width - $main-padding * 2 - 280px);
+
+
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+
+		padding: 0;
+
+		margin-bottom: 20px;
+
+	}
+
+	&__nav a {
+		display: block;
+		text-decoration: none;
+		color: #808080;
+		padding: 3px;
+	}
+
+	&__nav a:hover {
+		text-decoration: underline;
+	}
+
+	&__social {
+		@include reset-list;
+
+		flex-basis: 270px;
+
+		padding: 0;
+		margin: 0;
+
+		li {
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+
+		}
+
+		a.icon-instagram {
+			background-image: url(../icons/icon-instagram-grey.png);
+		}
+
+		a.icon-twitter {
+			background-image: url(../icons/icon-twitter-grey.png);
+		}
+
+		a.icon-facebook {
+			background-image: url(../icons/icon-facebook-grey.png);
+		}
+	}
+
+	&__copyright {
+		width: 100%;
+		display: block;
+		text-align: center;
+
+		margin-top: 20px;
+	}
+
+
+}
+
+
+//Styles for Desktop
+@media(min-width:$desktop-width) {
+
+	.page-footer {
+		width: 100%;
+		background-color: #e6e6e6;
+		height: 200px;
+
+		color: #808080;
+		font-size: 14px;
+
+		padding-top: 50px;
+
+		&__wrapper {
+			width: ($wrapper-width - $main-padding * 2);
+			margin: 0 auto;
+			text-align: left;
+
+			display: flex;
+			flex-flow: row wrap;
+
+		}
+
+		&__nav {
+			@include reset-list;
+
+			flex-basis: ($wrapper-width - $main-padding * 2 - 280px);
+
+
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-between;
+
+			padding: 0;
+			height: 40px;
+
+		}
+
+		&__nav a {
+			display: inline;
+			text-decoration: none;
+			color: #808080;
+		}
+
+		&__nav a:hover {
+			text-decoration: underline;
+		}
+
+		&__social {
+			@include reset-list;
+
+			flex-basis: 270px;
+
+			padding: 0;
+			margin: 0;
+
+			li {
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+
+				margin-right: 10px;
+
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+
+			}
+
+			a.icon-instagram {
+				background-image: url(../icons/icon-instagram-grey.png);
+			}
+
+			a.icon-instagram:hover,
+			a.icon-instagram:focus {
+				background-image: url(../icons/icon-instagram.png);
+			}
+
+			a.icon-twitter {
+				background-image: url(../icons/icon-twitter-grey.png);
+			}
+
+			a.icon-twitter:hover,
+			a.icon-twitter:focus {
+				background-image: url(../icons/icon-twitter.png);
+			}
+
+			a.icon-facebook {
+				background-image: url(../icons/icon-facebook-grey.png);
+			}
+
+			a.icon-facebook:hover,
+			a.icon-facebook:focus {
+				background-image: url(../icons/icon-facebook.png);
+			}
+		}
+
+		&__copyright {
+			width: 100%;
+			display: block;
+			text-align: center;
+
+			margin-top: 50px;
+		}
+
+
+	}
+}

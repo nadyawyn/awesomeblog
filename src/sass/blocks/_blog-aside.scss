@@ -1,0 +1,168 @@
+//Styles for Mobile
+.blog-aside {
+
+	&__h3 {
+		text-align: center;
+		font-size: 16px;
+		border: 1px solid #e6e6e6;
+		padding: 20px;
+	}
+
+	&__ul {
+		display: flex;
+		flex-flow: column nowrap;
+		margin: 0;
+		padding: 0;
+
+		li {
+			@include reset-list;
+			box-sizing: border-box;
+			height: 200px;
+			border-bottom: 1px solid #e6e6e6;
+			padding-top: 0;
+			padding-bottom: 0;
+
+			font-size: 18px;
+			text-align: center;
+
+			position: relative;
+		}
+
+		li:last-child {
+			border-bottom: none;
+		}
+
+		li p::before {
+			content: "";
+			display: block;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+
+			background-color: #eeeeee;
+
+			clip-path: circle();
+
+			background-size: cover;
+
+			background-position: center;
+
+			margin: 17px auto;
+		}
+		li p:hover::before {
+			width: 60px;
+			height: 60px;
+		}
+
+		li.li001 p::before {
+			background-image: url(../img/blogposts/001.jpg);
+		}
+		li.li002 p::before {
+			background-image: url(../img/blogposts/002.jpg);
+		}
+		li.li003 p::before {
+			background-image: url(../img/blogposts/003.jpg);
+		}
+		li.li004 p::before {
+			background-image: url(../img/blogposts/004.jpg);
+		}
+		li.li005 p::before {
+			background-image: url(../img/blogposts/005.jpg);
+		}
+
+		li a {
+			display: block;
+			width: 100%;
+			height: 50%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 999;
+		}
+	}
+
+	&__date {
+		margin-top: 10px;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #999999;
+		display: block;
+		text-align: center;
+	}
+
+	&__instagram-ul {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		padding: 0;
+
+		margin-top: 40px;
+
+		li {
+			@include reset-list;
+			margin-bottom: 30px;
+		}
+
+		li a {
+			display: block;
+			width: 120px;
+			height: 120px;
+
+			overflow: hidden;
+		}
+	}
+}
+
+//Styles for Tablet
+
+@media(min-width:$tablet-width) and (max-width:($desktop-width - 1)){
+	
+	.blog-aside {
+
+		&__h3 {
+			text-align: center;
+			font-size: 16px;
+			border: 1px solid #e6e6e6;
+			padding: 20px;
+		}
+	
+		&__ul {
+			display: flex;
+			flex-flow: row nowrap;
+			margin: 0;
+			padding: 0;
+
+
+			li {
+				@include reset-list;
+				box-sizing: border-box;
+				height: auto;
+				border-bottom: none;
+				padding-top: 0;
+				padding-bottom: 0;
+	
+				font-size: 14px;
+				text-align: center;
+	
+				position: relative;
+			}
+
+		}
+	}
+
+}
+
+//Styles for Desktop
+@media(min-width:$desktop-width){
+	.blog-aside {
+
+		&__ul {
+	
+			li {
+				@include reset-list;
+				padding-top: 20px;
+				padding-bottom: 30px;
+			}
+		}
+	}
+}

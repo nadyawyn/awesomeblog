@@ -1,0 +1,326 @@
+//Styles for Mobile
+
+.page-header {
+	&__social-icons {
+		width: 200px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+
+		align-content: center;
+		@include reset-list;
+
+		li {
+			display: inline-block;
+			margin-right: 15px;
+		}
+
+		li a {
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+			background-position: left;
+			background-repeat: no-repeat;
+		}
+
+		li a:hover {
+			mix-blend-mode: luminosity;
+		}
+
+		li a.icon-instagram {
+			background-image: url(../icons/icon-instagram.png);
+		}
+
+		li a.icon-instagram:hover,
+		li a.icon-instagram:focus {
+			background-image: url(../icons/icon-instagram-grey.png);
+		}
+
+		li a.icon-twitter {
+			background-image: url(../icons/icon-twitter.png);
+		}
+
+		li a.icon-twitter:hover,
+		li a.icon-twitter:focus {
+			background-image: url(../icons/icon-twitter-grey.png);
+		}
+
+		li a.icon-facebook {
+			background-image: url(../icons/icon-facebook.png);
+		}
+
+		li a.icon-facebook:hover,
+		li a.icon-facebook:focus {
+			background-image: url(../icons/icon-facebook-grey.png);
+		}
+	}
+
+}
+
+
+@media(max-width:($tablet-width - 1px)) {
+	.page-header {
+		width: 100%;
+		border-bottom: 1px dotted #e6e6e6;
+		padding-bottom: 20px;
+
+		&__wrapper {
+			width: 100%;
+
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-between;
+
+			text-align: center;
+		}
+
+		&__logo {
+			order: -1;
+			display: block;
+			width: 200px;
+			height: 130px;
+
+			background-repeat: no-repeat;
+
+			background-position: center;
+
+			background-image: url(../img/aw-logo.png);
+
+			margin: 10px auto;
+		}
+
+		&__social {
+			text-align: center;
+		}
+
+		&__social-icons {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-around;
+
+			margin: 0 auto;
+
+			li {
+				display: inline-block;
+				margin: 0;
+			}
+
+			li a {
+
+				background-position: center;
+
+			}
+		}
+
+		&__user-menu {
+
+			width: 100%;
+
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-around;
+
+		}
+
+		&__search {
+			width: 250px;
+			height: 33px;
+			background-image: url(../img/search.png);
+			background-repeat: no-repeat;
+			background-position: top 7px right 6px;
+
+			border: none;
+			background-color: #efefef;
+
+			margin: 10px;
+		}
+
+		&__subscribe-button {
+			height: 28px;
+			padding-top: 4px;
+			width: 250px;
+			border: none;
+			background-color: #23374d;
+			color: #ffffff;
+
+			margin: 0 auto;
+
+			border-radius: 20px;
+
+
+			text-transform: uppercase;
+		}
+	}
+}
+
+//Styles for Tablet
+
+@media(min-width:$tablet-width) and (max-width:($desktop-width - 1)) {
+	.page-header {
+		padding-left: 20px;
+		padding-right: 20px;
+		border-bottom: 1px dotted #e6e6e6;
+
+		&__wrapper {
+			margin: 33px auto;
+
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+
+		&__h1 {
+			margin: 0;
+		}
+
+		&__logo {
+			order: -1;
+			flex-basis: 70%;
+
+			display: block;
+			width: 200px;
+			height: 130px;
+
+			background-repeat: no-repeat;
+
+			background-position: -10px -37px;
+
+			background-image: url(../img/aw-logo.png);
+		}
+
+		&__social-icons {
+			width: auto;
+			flex-flow: column nowrap;
+			align-items: flex-start;
+
+			li a {
+
+				background-position: center;
+
+			}
+		}
+
+		&__user-menu {
+
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-around;
+
+			align-items: stretch;
+		}
+
+		&__search {
+			height: 33px;
+			background-image: url(../img/search.png);
+			background-repeat: no-repeat;
+			background-position: right;
+
+			border: none;
+
+			background-color: #efefef;
+			border-radius: 10px;
+		}
+
+		&__subscribe-button {
+			margin-top: 10px;
+			height: 38px;
+			width: 150px;
+			border: none;
+			background-color: #23374d;
+			color: #ffffff;
+
+			border-radius: 20px;
+
+
+			text-transform: uppercase;
+		}
+
+		&__subscribe-button:hover,
+		&__subscribe-button:focus {
+			background-color: #2e4865;
+			color: #e6e6e6;
+		}
+
+	}
+
+}
+
+
+//Styles for Desktop
+@media(min-width:$desktop-width) {
+
+	.page-header {
+		width: 100%;
+		border-bottom: 1px dotted #e6e6e6;
+
+		&__wrapper {
+			width: ($wrapper-width - $main-padding * 2);
+			margin-top: 33px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 5px;
+
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+
+		&__logo {
+			display: block;
+			width: 200px;
+			height: 120px;
+
+			background-repeat: no-repeat;
+
+			background-position: center;
+
+			background-image: url(../img/aw-logo.png);
+
+			margin: 10px auto;
+		}
+
+		&__h1 {
+			margin: 0;
+		}
+
+		&__user-menu {
+			height: 33px;
+			width: 300px;
+
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-end;
+		}
+
+		&__search {
+			height: 33px;
+			background-image: url(../img/search.png);
+			background-repeat: no-repeat;
+			background-position: right;
+
+			border: none;
+		}
+
+		&__subscribe-button {
+			height: 38px;
+			width: 150px;
+			border: none;
+			background-color: #23374d;
+			color: #ffffff;
+
+			border-radius: 20px;
+
+			margin-left: 20px;
+
+			text-transform: uppercase;
+		}
+
+		&__subscribe-button:hover,
+		&__subscribe-button:focus {
+			background-color: #2e4865;
+			color: #e6e6e6;
+		}
+
+	}
+
+}

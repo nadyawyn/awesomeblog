@@ -1,0 +1,142 @@
+//Styles for Mobile
+
+
+.blog-post {
+
+	padding-bottom: 30px;
+	border-bottom: 1px solid #e6e6e6;
+
+	&__h2 {
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 22px;
+	}
+
+	&__date-comments {
+		margin-top: 10px;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #999999;
+		display: block;
+		text-align: center;
+	}
+
+	&__photo {
+		margin-top: 30px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+
+	&__read-more {
+		display: block;
+		width: 120px;
+		background-color: #23374d;
+		color: #ffffff;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 12px;
+		border: none;
+		text-align: center;
+	}
+
+	&__read-more:hover,
+	&__read-more:focus {
+		background-color: #2e4865;
+		color: #e6e6e6;
+	}
+
+
+	&__share-icons {
+		@include reset-list;
+		width: 115px;
+
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+
+
+		li a {
+			display: block;
+			width: 28px;
+			height: 28px;
+
+			background-position: center;
+			background-repeat: no-repeat;
+
+			margin-right: 5px;
+		}
+
+		li a.icon-whatsapp {
+			background-image: url(../icons/icon-whatsapp-small.png);
+		}
+
+		li a.icon-twitter {
+			background-image: url(../icons/icon-twitter.png);
+		}
+
+		li a.icon-facebook {
+			background-image: url(../icons/icon-facebook.png);
+		}
+
+		li a.icon-pinterest {
+			background-image: url(../icons/icon-pinterest-small.png);
+			background-position: left;
+		}
+
+	}
+
+	&__pagination {
+		padding-top: 45px;
+		padding-bottom: 75px;
+
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+
+		a {
+			font-size: 15px;
+			font-weight: bold;
+			color: #000000;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #999999;
+			text-decoration: underline;
+		}
+	}
+
+	&__prev,
+	&__next {
+		width: 150px;
+	}
+
+	&__next {
+		text-align: right;
+	}
+}
+
+.blog-post:last-of-type {
+	border-bottom: none;
+}
+
+
+@media(max-width:$tablet-width) {
+	.blog-post {
+		&__h2 {
+			font-size: 24px;
+			margin-bottom: 16px;
+		}
+
+		&__prev,
+		&__next {
+			width: 100px;
+		}
+	}
+}
